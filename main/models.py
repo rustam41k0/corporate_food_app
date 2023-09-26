@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from django.db import models
 
 
@@ -18,7 +20,7 @@ class Dish(models.Model):
 
 
 class Order(models.Model):
-    date = models.DateTimeField(auto_now_add=True)
+    date = models.DateTimeField(default=datetime.now())
     worker = models.ForeignKey('Worker', on_delete=models.CASCADE)
 
     def __str__(self):

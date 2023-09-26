@@ -6,7 +6,7 @@ from django import forms
 class OrderForm(forms.ModelForm):
     class Meta:
         model = Order
-        fields = ['worker']
+        fields = ['worker', 'date']
 
 
 class OrderDishForm(forms.ModelForm):
