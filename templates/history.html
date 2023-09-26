@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6">
+                <div class="text-center main" style="margin-top: 33%;">
+                    {% for order, dishes in order_dict.items %}
+                        <h2>{{ order }}</h2>
+                        {% for dish in dishes %}
+                            <h5>{{ dish }}</h5>
+                        {% endfor %}
+                        <br><br>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="col-3"></div>
+        </div>
+    </div>
+{% endblock %}

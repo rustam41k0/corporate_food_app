@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6">
+                <div class="text-center main" style="margin-top: 40%">
+                    <h3 class="title">Добро пожаловать на сайт для корпоративного заказа еды</h3><br>
+                    <a class="btn btn-primary btn-lg" role="button" href="{% url 'create-order' %}">Создать заказ</a><br><br>
+                    <a class="btn btn-success btn-lg" role="button" href="{% url 'history' %}">История заказов</a><br><br>
+                </div>
+            </div>
+            <div class="col-3"></div>
+        </div>
+    </div>
+{% endblock %}
